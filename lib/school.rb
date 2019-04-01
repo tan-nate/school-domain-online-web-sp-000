@@ -19,7 +19,6 @@ class School
       @roster[grade] = []
       @roster[grade] << student_name
     end
-    #binding.pry
   end
   
   def grade(grade)
@@ -28,10 +27,7 @@ class School
   
   def sort
     @roster.each do |grade, students|
-      #binding.pry
       students.sort!
     end
   end
 end
-
-#binding.pry
