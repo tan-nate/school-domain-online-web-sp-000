@@ -3,22 +3,21 @@ require 'pry'
 class School
   attr_reader :school_name
   
-  ROSTER = {}
-  
   def initialize(school_name)
     @school_name = school_name
+    @roster = {}
   end
   
   def roster
-    ROSTER
+    @roster
   end
   
   def add_student(student_name, grade)
-    if ROSTER.keys.include?(grade)
-      ROSTER[grade] << student_name
+    if @roster.keys.include?(grade)
+      @roster[grade] << student_name
     else
-      ROSTER[grade] = []
-      ROSTER[grade] << student_name
+      @roster[grade] = []
+      @roster[grade] << student_name
     end
     #binding.pry
   end
