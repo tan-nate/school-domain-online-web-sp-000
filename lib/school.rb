@@ -24,4 +24,4 @@ class School
   end
 end
 
-binding.pry
+#binding.pry
